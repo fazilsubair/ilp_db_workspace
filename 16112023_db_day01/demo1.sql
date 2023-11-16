@@ -62,3 +62,9 @@ create table account(accout_no varchar(10) not null primary key, customer_id var
 -- inset into account
 
 
+insert into account values('ACC0000001','CSS0000001','PC00000001');
+insert into account values('ACC0000002','CSS0000002','PC00000002');
+insert into account values('ACC0000003','CSS0000003','PC00000003');
+insert into account values('ACC0000004','CSS0000004','PC00000004');
+insert into account values('ACC0000005','CSS0000005','PC00000005');
+ 
