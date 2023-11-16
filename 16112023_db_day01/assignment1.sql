@@ -115,11 +115,16 @@ create table transaction(transaction_code varchar(10) not null primary key,produ
 -- insert into transaction
 
 
-INSERT INTO transaction 
-VALUES
-('TC000001', 'PC0000001', 'SC00000001', STR_TO_DATE('Tue Nov 16 19:32:18 2021', '%a %b %d %H:%i:%s %Y'), 60000000),
-('TC000002', 'PC0000001', 'SC00000002', STR_TO_DATE('Tue Dec 28 21:21:30 PST 2021', '%a %b %d %H:%i:%s PST %Y'), 87654433),
-('TC000003', 'PC0000001', 'SC00000004', STR_TO_DATE('Wed Dec 29 18:16:34 PST 2021', '%a %b %d %H:%i:%s PST %Y'), 788888888),
-('TC000004', 'PC0000002', 'SC00000001', STR_TO_DATE('Mon Dec 27 15:16:34 PST 2021', '%a %b %d %H:%i:%s PST %Y'), 7986554),
-('TC000005', 'PC0000002', 'SC00000002', STR_TO_DATE('Tue Nov 16 23:10:49 PST 2021', '%a %b %d %H:%i:%s PST %Y'), 366666666),
-('TC000006', 'PC0000003', 'SC00000002', STR_TO_DATE('Thu Nov 18 13:52:18 PST 2021', '%a %b %d %H:%i:%s PST %Y'), 608654400);
+INSERT INTO Transaction VALUES ('TC000001', 'PC0000001', 'SC00000001', '2021-11-16 19:32:18', 60000000);
+INSERT INTO Transaction VALUES ('TC000002', 'PC0000001', 'SC00000002', '2021-12-28 21:21:30', 87654433);
+INSERT INTO Transaction VALUES ('TC000003', 'PC0000001', 'SC00000004', '2021-12-29 18:16:34', 788888888);
+INSERT INTO Transaction VALUES ('TC000004', 'PC0000002', 'SC00000001', '2021-12-27 15:16:34', 7986554);
+INSERT INTO Transaction VALUES ('TC000005', 'PC0000002', 'SC00000002', '2021-11-16 23:10:49', 366666666);
+INSERT INTO Transaction VALUES ('TC000006', 'PC0000003', 'SC00000002', '2021-11-18 13:52:18', 608654400);
+
+
+
+-- select in transaction
+
+
+select transaction_code,product_code,service_code,DATE_FORMAT(dateoftransaction , '%a %b %d %H:%i:%s %Y') as dateoftransaction , volume from transaction;
