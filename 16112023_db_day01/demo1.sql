@@ -39,7 +39,7 @@ CREATE TABLE product(product_code VARCHAR(10) not NULL PRIMARY KEY,product_name 
 
 -- alter table 
 
-ALTER TABLE product ALTER COLUMN product_name VARCHAR (30) NOT NULL;
+ALTER TABLE product modify COLUMN product_name VARCHAR (30) NOT NULL;
 
 
 
